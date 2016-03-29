@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ColoringBook</string>
+    <string name="backpress_exit">Please press one more time to exit</string>
+</resources>
