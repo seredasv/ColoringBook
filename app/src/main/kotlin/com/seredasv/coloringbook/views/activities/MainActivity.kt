@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentTransaction
 import android.support.v7.widget.Toolbar
 import android.widget.FrameLayout
 import com.seredasv.coloringbook.R
-import com.seredasv.coloringbook.helpers.showToastShort
+import com.seredasv.coloringbook.helpers.ToastHelper
 import com.seredasv.coloringbook.views.fragments.MainColoringTabsFragment
 
 class MainActivity : AppCompatActivity() {
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             if (backPressedTime + BACKPRESS_MILLIS > System.currentTimeMillis()) {
                 this.finish()
             } else {
-                showToastShort(this, getString(R.string.backpress_exit))
+                ToastHelper.showToastShort(this, getString(R.string.backpress_exit))
             }
             backPressedTime = System.currentTimeMillis();
         } else {

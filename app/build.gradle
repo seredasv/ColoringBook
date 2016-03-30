@@ -59,4 +59,10 @@ dependencies {
 
     // image loading
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    // events
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    // database orm
+    compile 'com.j256.ormlite:ormlite-android:4.48'
 }
