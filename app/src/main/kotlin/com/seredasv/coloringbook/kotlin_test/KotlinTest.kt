@@ -141,3 +141,7 @@ class Box<T>(t: T) {
     var value = t
 }
 
+fun String.encodeSpaces(): String {
+    return this.replace(" ", "_")
+}
+

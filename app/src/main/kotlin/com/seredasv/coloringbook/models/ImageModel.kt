@@ -1,16 +1,10 @@
 package com.seredasv.coloringbook.models
 
-import com.j256.ormlite.field.DatabaseField
-import com.j256.ormlite.table.DatabaseTable
+import io.realm.RealmList
+import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
 
-@DatabaseTable(tableName = "image")
-class ImageModel {
-    @DatabaseField(id = true, generatedId = true)
-    private var id: Int = 0
-    @DatabaseField
-    private var name: String? = null
-    @DatabaseField
-    private var status: ImageColoringStatus = ImageColoringStatus.NOT_COLORED
-    @DatabaseField
-    private var coordinates: List<ImageCoordinateModel>? = null
+open class ImageModel(@PrimaryKey open var id: Int = 0, open var name: String? = null,
+                      open var status: String = ImageColoringStatus.NOT_COLORED.toString(),
+                      open var coordinates: RealmList<ImageCoordinateModel> = RealmList()) : RealmObject() {
 }
